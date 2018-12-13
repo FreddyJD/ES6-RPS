@@ -41,23 +41,30 @@ var userSelection = userSelection;
 
 if (userSelection + computerSelection === "02") { 
     document.getElementById('userWins_tag').innerHTML = userWins++;
+    document.getElementById('console_tag').innerHTML = "You won! Console choosed Scissors";
 
 } else if (userSelection + computerSelection == "10") { 
     document.getElementById('userWins_tag').innerHTML = userWins++;
+    document.getElementById('console_tag').innerHTML = "You won! Console choosed Rock";
 
 } else if (userSelection + computerSelection == "21") { 
     document.getElementById('userWins_tag').innerHTML = userWins++;
+    document.getElementById('console_tag').innerHTML = "You won! Console choosed Paper";
 
 } else if (userSelection + computerSelection == "01") { 
     document.getElementById('computerWins_tag').innerHTML = computerWins++;
+    document.getElementById('console_tag').innerHTML = "You lose! Console choosed Paper";
 
 } else if (userSelection + computerSelection == "12") { 
     document.getElementById('computerWins_tag').innerHTML = computerWins++;
+    document.getElementById('console_tag').innerHTML = "You lose! Console choosed Scissors";
 
 } else if (userSelection + computerSelection == "20") { 
     document.getElementById('computerWins_tag').innerHTML = computerWins++;
+    document.getElementById('console_tag').innerHTML = "You lose! Console choosed Rock";
 
 } else if (userSelection + computerSelection == 00 || 11 || 22) {
     document.getElementById('gameTie_tag').innerHTML = gameTie++;
+    document.getElementById('console_tag').innerHTML = "Tie. Console choosed the same!";
 }
 }
