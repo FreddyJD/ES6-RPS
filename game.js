@@ -1,4 +1,4 @@
-// Freddy's Pseudo Code
+// Psudo code of :  Kaleigh,  Liz Perry, Michael Howel, Jonathan McKinney, Freddy
 // 1) We cache all informatio that the user/computer  needs 
 //      - User 
 //      - Computer
@@ -18,13 +18,19 @@
     // S = 2 
 // Combos 02, 10, 21 (Users win) --- 01, 12, 20 (Computer win) 00, 11, 22 (tie)
 
-var userWins = 0;
-var computerWins = 0;
-var gameTie = 0;
+
+var userWins = 1;
+var computerWins = 1;
+var gameTie = 1;
+var userWins_tag = userWins;
+var computerWins_tag = computerWins;
+var gameTie_tag = gameTie;
+var computerSelection = 0;
+var userSelection = 0;
+
 
 document.onkeyup = function(event) {
     var computerSelection = Math.floor(Math.random() * 3);
-    console.log("Computer choosed " + computerSelection)
 
     var userSelection = event.key
     if (userSelection === "r") { 
@@ -43,28 +49,28 @@ if (userSelection + computerSelection === "02") {
     document.getElementById('userWins_tag').innerHTML = userWins++;
     document.getElementById('console_tag').innerHTML = "You won! Console choosed Scissors";
 
-} else if (userSelection + computerSelection == "10") { 
+} else if (userSelection + computerSelection === "10") { 
     document.getElementById('userWins_tag').innerHTML = userWins++;
     document.getElementById('console_tag').innerHTML = "You won! Console choosed Rock";
 
-} else if (userSelection + computerSelection == "21") { 
+} else if (userSelection + computerSelection === "21") { 
     document.getElementById('userWins_tag').innerHTML = userWins++;
     document.getElementById('console_tag').innerHTML = "You won! Console choosed Paper";
 
-} else if (userSelection + computerSelection == "01") { 
+} else if (userSelection + computerSelection === "01") { 
     document.getElementById('computerWins_tag').innerHTML = computerWins++;
     document.getElementById('console_tag').innerHTML = "You lose! Console choosed Paper";
 
-} else if (userSelection + computerSelection == "12") { 
+} else if (userSelection + computerSelection === "12") { 
     document.getElementById('computerWins_tag').innerHTML = computerWins++;
     document.getElementById('console_tag').innerHTML = "You lose! Console choosed Scissors";
 
-} else if (userSelection + computerSelection == "20") { 
+} else if (userSelection + computerSelection === "20") { 
     document.getElementById('computerWins_tag').innerHTML = computerWins++;
     document.getElementById('console_tag').innerHTML = "You lose! Console choosed Rock";
 
-} else if (userSelection + computerSelection == 00 || 11 || 22) {
+} else if (userSelection + computerSelection === 00 || 11 || 22) {
     document.getElementById('gameTie_tag').innerHTML = gameTie++;
     document.getElementById('console_tag').innerHTML = "Tie. Console choosed the same!";
-}
+} 
 }
