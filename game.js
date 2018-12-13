@@ -29,6 +29,15 @@ document.onkeyup = function(event) {
     var userSelection = event.key
     if (userSelection === "r") { 
         var userSelection = 1; 
+        console.log(userSelection);
+    } else if (userSelection === "p") {
+        var userSelection = 2;
+        console.log(userSelection);
+    } else if (userSelection === "s") { 
+        var userSelection = 3; 
+        console.log(userSelection);
+    } else { 
+        return;
     }
 
 };
