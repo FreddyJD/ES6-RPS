@@ -4,15 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>Freddy's RPS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock, Paper or Scissors | Freddy's activitie</title>
 </head>
 <body>
-
-    Win : <p id="userWins_tag">0</p>
-    Lose : <p id="computerWins_tag">0</p>
-    Tie : <p id="gameTie_tag">0</p>
-    
-    <script src="game.js"></script>
+    <div class="container">
+        <div class="row">
+            <div class="alert alert-warning">
+                <h3> <strong>Hey!</strong> Welcome to my Rock, Paper or Scissors game! </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                
+                <p><strong>Stats: </strong><br> 
+                 Wins: <span id="userWins_tag"> 0 </span> <br>
+                 Loses : <span id="computerWins_tag"> 0 </span> <br>
+                 Ties : <span id="gameTie_tag"> 0 </span> </p>
+            </div>
+            <div class="col-md-6">
+                <p> <strong>Controls: </strong><br>R = Rock<br>P = Paper<br>S = Scissors<br>
+                    
+                    <strong>Console: </strong><span id="console_tag">Waiting for a keystroke </span></p>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="game.js"></script>
 </html>
