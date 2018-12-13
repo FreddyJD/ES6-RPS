@@ -20,7 +20,7 @@
 
 var computerSelection = Math.floor(Math.random() * 3);
 console.log(computerSelection)
-var userSelection = 0; 
+
 var userWin = 0;
 var computerWin = 0;
 var gameTie = 0;
@@ -28,16 +28,18 @@ var gameTie = 0;
 document.onkeyup = function(event) {
     var userSelection = event.key
     if (userSelection === "r") { 
-        var userSelection = 1; 
-        console.log(userSelection);
-    } else if (userSelection === "p") {
-        var userSelection = 2;
-        console.log(userSelection);
-    } else if (userSelection === "s") { 
-        var userSelection = 3; 
-        console.log(userSelection);
-    } else { 
-        return;
-    }
+        var userSelection = "0"; 
 
+    } else if (userSelection === "p") {
+        var userSelection = "1";
+
+    } else  { 
+        var userSelection = "2"; 
 };
+
+var userSelection = userSelection; 
+if (userSelection + computerSelection === "12") { 
+    console.log("You won!")
+}
+} 
+
