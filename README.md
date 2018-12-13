@@ -1,1 +1,1 @@
-# rps-fred-game
+# rps-game
